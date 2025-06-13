@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorite Playlist</title>
+  </head>
+  <body>
+    <h1>My Favorite Playlist 🎶</h1>
+    <ol>
+      <li><b>Seval Kodi</b></li>
+      <h4>Video</h4>
+      <img src="Image/Seval-Kodi.jpeg" alt="" height="250" width="300">
+      <br />
+      <h4>Audio</h4>
+      <audio src="./Audio/Seval-Kodi.mp3" controls></audio
+      ><br /><br />
+
+      <li><b>Aazhi Soozhndha</b></li>
+      <h4>Video</h4>
+         <img src="Image/Aazhi-Soozhndha.jpeg" alt="" height="250" width="300">
+      <br />
+      <h4>Audio</h4>
+      <audio src="./Audio/Aazhi-Soozhndha.mp3" controls></audio
+      ><br /><br />
+
+      <li><b>Avalukena</b></li>
+      <h4>Video</h4>
+          <img src="Image/Avalukena.jpeg" alt="" height="250" width="300">
+      <br />
+      <h4>Audio</h4>
+      <audio src="./Audio/Avalukena.mp3" controls></audio
+      ><br /><br />
+
+      <li><b>Vetrivel</b></li>
+      <h4>Video</h4>
+          <img src="Image/Adiye-Unna-Paathida.jpeg" alt="" height="250" width="300">
+      <br />
+      <h4>Audio</h4>
+      <audio src="./Audio/Adiye-Unna-Paathida.mp3" controls></audio
+      ><br /><br />
+
+      <li><b>Champagini</b></li>
+      <h4>Video</h4>
+          <img src="Image/Champagini.jpg" alt="" height="250" width="300">
+      <br />
+      <h4>Audio</h4>
+      <audio src="./Audio/Champagini.mp3" controls></audio
+      ><br /><br />
+    </ol>
+
+    <script>
+      const startTimes = {
+        seval: 92, // 1:32
+        aazhi: 87, // 1:27
+        avalukena: 50, // 0:50
+        vetrivel: 17, // 0:17
+        champagini: 39, // 0:39
+      };
+
+      for (let id in startTimes) {
+        const vid = document.getElementById(id);
+        vid.addEventListener("loadedmetadata", () => {
+          vid.currentTime = startTimes[id];
+        });
+      }
+    </script>
+  </body>
+</html>
